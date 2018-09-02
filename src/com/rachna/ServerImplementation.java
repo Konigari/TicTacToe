@@ -38,7 +38,8 @@ public class ServerImplementation implements ServerInterface {
         }
         else{
             boolean win = board.checkForWin();
-            result = new Result(false,null,board, win);
+            result = new Result(false,win?"You Won!":"Successfully placed move",board, win);
+            currentPlayer = board.changePlayer(currentPlayer);
         }
         return result;
     }

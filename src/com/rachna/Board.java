@@ -85,6 +85,15 @@ public class Board implements Serializable {
         return ((c1 != '-') && (c1 == c2) && (c2 == c3));
     }
 
+    public char changePlayer(char currentPlayerMark) {
+        if (currentPlayerMark == 'x') {
+            currentPlayerMark = 'o';
+        }
+        else {
+            currentPlayerMark = 'x';
+        }
+        return currentPlayerMark;
+    }
 
 
     // Places a mark at the cell specified by row and col with the mark of the current player.
