@@ -65,7 +65,7 @@ public class Client {
                 result.board.print();
                 System.out.print(result.message);
 
-                gameloop = result.win;
+                gameloop = !result.win;
             }
 
         }
