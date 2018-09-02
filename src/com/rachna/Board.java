@@ -1,10 +1,15 @@
 package com.rachna;
 
 
-public class Board {
+import java.io.Serializable;
+import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
+
+public class Board implements Serializable {
     char[][] board = new char[3][3];
 
-    public Board(){
+    public Board() throws RemoteException {
+        super();
         initializeBoard();
     }
 

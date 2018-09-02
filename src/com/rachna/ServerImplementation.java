@@ -16,7 +16,11 @@ public class ServerImplementation implements ServerInterface {
     private int playercount = 0;
 
     public ServerImplementation() {
-        board = new Board();
+        try {
+            board = new Board();
+        } catch (RemoteException e) {
+            e.printStackTrace();
+        }
         playerToId = new HashMap<>();
     }
 
